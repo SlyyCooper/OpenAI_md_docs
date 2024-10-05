@@ -1,6 +1,6 @@
 # Client Events
 
-**Beta**
+
 
 These are events that the OpenAI Realtime WebSocket server will accept from the client.
 
@@ -8,7 +8,7 @@ Learn more about the Realtime API.
 
 ## session.update
 
-**Beta**
+
 
 Send this event to update the session’s default configuration.
 
@@ -101,7 +101,7 @@ Send this event to update the session’s default configuration.
 
 ## input_audio_buffer.append
 
-**Beta**
+
 
 Send this event to append audio bytes to the input audio buffer.
 
@@ -125,7 +125,7 @@ Send this event to append audio bytes to the input audio buffer.
 
 ## input_audio_buffer.commit
 
-**Beta**
+
 
 Send this event to commit audio bytes to a user message.
 
@@ -147,7 +147,7 @@ Send this event to commit audio bytes to a user message.
 
 ## input_audio_buffer.clear
 
-**Beta**
+
 
 Send this event to clear the audio bytes in the buffer.
 
@@ -169,7 +169,7 @@ Send this event to clear the audio bytes in the buffer.
 
 ## conversation.item.create
 
-**Beta**
+
 
 Send this event when adding an item to the conversation.
 
@@ -226,7 +226,7 @@ Send this event when adding an item to the conversation.
 
 ## conversation.item.truncate
 
-**Beta**
+
 
 Send this event when you want to truncate a previous assistant message’s audio.
 
@@ -254,7 +254,7 @@ Send this event when you want to truncate a previous assistant message’s audio
 
 ## conversation.item.delete
 
-**Beta**
+
 
 Send this event when you want to remove any item from the conversation history.
 
@@ -278,7 +278,7 @@ Send this event when you want to remove any item from the conversation history.
 
 ## response.create
 
-**Beta**
+
 
 Send this event to trigger a response generation.
 
@@ -344,7 +344,7 @@ Send this event to trigger a response generation.
 
 ## response.cancel
 
-**Beta**
+
 
 Send this event to cancel an in-progress response.
 
@@ -366,7 +366,7 @@ Send this event to cancel an in-progress response.
 
 # Server Events
 
-**Beta**
+
 
 These are events emitted from the OpenAI Realtime WebSocket server to the client.
 
@@ -374,7 +374,7 @@ Learn more about the Realtime API.
 
 ## error
 
-**Beta**
+
 
 Returned when an error occurs.
 
@@ -412,7 +412,7 @@ Returned when an error occurs.
 
 ## session.created
 
-**Beta**
+
 
 Returned when a session is created. Emitted automatically when a new connection is established.
 
@@ -495,7 +495,7 @@ Returned when a session is created. Emitted automatically when a new connection 
 
 ## session.updated
 
-**Beta**
+
 
 Returned when a session is updated.
 
@@ -541,7 +541,7 @@ Returned when a session is updated.
 
 ## conversation.created
 
-**Beta**
+
 
 Returned when a conversation is created. Emitted right after session creation.
 
@@ -573,7 +573,7 @@ Returned when a conversation is created. Emitted right after session creation.
 
 ## input_audio_buffer.committed
 
-**Beta**
+
 
 Returned when an input audio buffer is committed, either by the client or automatically in server VAD mode.
 
@@ -599,7 +599,7 @@ Returned when an input audio buffer is committed, either by the client or automa
 
 ## input_audio_buffer.cleared
 
-**Beta**
+
 
 Returned when the input audio buffer is cleared by the client.
 
@@ -621,7 +621,7 @@ Returned when the input audio buffer is cleared by the client.
 
 ## input_audio_buffer.speech_started
 
-**Beta**
+
 
 Returned in server turn detection mode when speech is detected.
 
@@ -647,7 +647,7 @@ Returned in server turn detection mode when speech is detected.
 
 ## input_audio_buffer.speech_stopped
 
-**Beta**
+
 
 Returned in server turn detection mode when speech stops.
 
@@ -673,7 +673,7 @@ Returned in server turn detection mode when speech stops.
 
 ## conversation.item.created
 
-**Beta**
+
 
 Returned when a conversation item is created.
 
@@ -713,7 +713,7 @@ Returned when a conversation item is created.
 
 ## conversation.item.input_audio_transcription.completed
 
-**Beta**
+
 
 Returned when input audio transcription is enabled and a transcription succeeds.
 
@@ -741,7 +741,7 @@ Returned when input audio transcription is enabled and a transcription succeeds.
 
 ## conversation.item.input_audio_transcription.failed
 
-**Beta**
+
 
 Returned when input audio transcription is configured, and a transcription request for a user message failed.
 
@@ -781,7 +781,7 @@ Returned when input audio transcription is configured, and a transcription reque
 
 ## conversation.item.truncated
 
-**Beta**
+
 
 Returned when an earlier assistant audio message item is truncated by the client.
 
@@ -809,7 +809,7 @@ Returned when an earlier assistant audio message item is truncated by the client
 
 ## conversation.item.deleted
 
-**Beta**
+
 
 Returned when an item in the conversation is deleted.
 
@@ -833,7 +833,7 @@ Returned when an item in the conversation is deleted.
 
 ## response.created
 
-**Beta**
+
 
 Returned when a new Response is created. The first event of response creation, where the response is in an initial state of `"in_progress"`.
 
@@ -873,7 +873,7 @@ Returned when a new Response is created. The first event of response creation, w
 
 ## response.done
 
-**Beta**
+
 
 Returned when a Response is done streaming. Always emitted, no matter the final state.
 
@@ -924,7 +924,7 @@ Returned when a Response is done streaming. Always emitted, no matter the final 
 
 ## response.output_item.added
 
-**Beta**
+
 
 Returned when a new Item is created during response generation.
 
@@ -961,7 +961,7 @@ Returned when a new Item is created during response generation.
 
 ## response.output_item.done
 
-**Beta**
+
 
 Returned when an Item is done streaming. Also emitted when a Response is interrupted, incomplete, or cancelled.
 
@@ -1003,7 +1003,7 @@ Returned when an Item is done streaming. Also emitted when a Response is interru
 
 ## response.content_part.added
 
-**Beta**
+
 
 Returned when a new content part is added to an assistant message item during response generation.
 
@@ -1045,7 +1045,7 @@ Returned when a new content part is added to an assistant message item during re
 
 ## response.content_part.done
 
-**Beta**
+
 
 Returned when a content part is done streaming in an assistant message item. Also emitted when a Response is interrupted, incomplete, or cancelled.
 
@@ -1082,7 +1082,7 @@ Returned when a content part is done streaming in an assistant message item. Als
 
 ## response.text.delta
 
-**Beta**
+
 
 Returned when the text value of a `"text"` content part is updated.
 
@@ -1114,7 +1114,7 @@ Returned when the text value of a `"text"` content part is updated.
 
 ## response.text.done
 
-**Beta**
+
 
 Returned when the text value of a `"text"` content part is done streaming. Also emitted when a Response is interrupted, incomplete, or cancelled.
 
@@ -1146,7 +1146,7 @@ Returned when the text value of a `"text"` content part is done streaming. Also 
 
 ## response.audio_transcript.delta
 
-**Beta**
+
 
 Returned when the model-generated transcription of audio output is updated.
 
@@ -1178,7 +1178,7 @@ Returned when the model-generated transcription of audio output is updated.
 
 ## response.audio_transcript.done
 
-**Beta**
+
 
 Returned when the model-generated transcription of audio output is done streaming. Also emitted when a Response is interrupted, incomplete, or cancelled.
 
@@ -1210,7 +1210,7 @@ Returned when the model-generated transcription of audio output is done streamin
 
 ## response.audio.delta
 
-**Beta**
+
 
 Returned when the model-generated audio is updated.
 
@@ -1242,7 +1242,7 @@ Returned when the model-generated audio is updated.
 
 ## response.audio.done
 
-**Beta**
+
 
 Returned when the model-generated audio is done. Also emitted when a Response is interrupted, incomplete, or cancelled.
 
@@ -1272,7 +1272,7 @@ Returned when the model-generated audio is done. Also emitted when a Response is
 
 ## response.function_call_arguments.delta
 
-**Beta**
+
 
 Returned when the model-generated function call arguments are updated.
 
@@ -1304,7 +1304,7 @@ Returned when the model-generated function call arguments are updated.
 
 ## response.function_call_arguments.done
 
-**Beta**
+
 
 Returned when the model-generated function call arguments are done streaming. Also emitted when a Response is interrupted, incomplete, or cancelled.
 
@@ -1336,7 +1336,7 @@ Returned when the model-generated function call arguments are done streaming. Al
 
 ## rate_limits.updated
 
-**Beta**
+
 
 Emitted after every `"response.done"` event to indicate the updated rate limits.
 
